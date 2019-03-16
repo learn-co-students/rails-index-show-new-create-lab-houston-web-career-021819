@@ -52,3 +52,5 @@ The application you will be building is a Coupon app. Below is a high-level over
 * [Reading on Form Integration](https://github.com/learn-co-curriculum/rails-form_tag-readme)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/rails-index-show-new-create-lab' title='Index, Show, New, Create Lab'>Index, Show, New, Create Lab</a> on Learn.co and start learning to code for free.</p>
+
+## Had to upgrade Rails to 5.0 and specify sqlite as version 1.3.6 to get bundle install and migrating to work, then ran into an error like "Missing `secret_key_base` for 'test' environment, set this value in `config/secrets.yml`". https://gist.github.com/pablosalgadom/4d75f30517edc6230a67 led me to include "config.secret_key_base = "<%= ENV["SECRET_KEY_BASE"] %>"" in all 3 files in /config/environments/ and then it worked...

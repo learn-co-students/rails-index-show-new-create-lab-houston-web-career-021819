@@ -1,0 +1,9 @@
+<%=form_tag("/coupons") do %>
+    <%="Coupon Form"%>
+    <%=label_tag('coupon[coupon_code]',"Coupon Code")%>
+    <%= text_field_tag('coupon[coupon_code]')%>
+    <%=label_tag('coupon[store]',"Store Name")%>
+    <%= text_field_tag('coupon[store]')%>
+
+    <%= submit_tag "Submit Coupon"%>
+<% end %>
